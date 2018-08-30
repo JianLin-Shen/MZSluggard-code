@@ -3,5 +3,11 @@
 ### Example user template
 
 # IntelliJ project files
+.idea/*
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+*.iml
+!ManzoAndroidPlugin.iml
 out
 gen
