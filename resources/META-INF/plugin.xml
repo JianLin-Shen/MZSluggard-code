@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.manzo.android.plugin.layout</id>
+    <name>ManzoAndroidPlugin</name>
+    <version>1.0.1</version>
+    <vendor email="1104724999@qq.com" url="https://blog.csdn.net/shenjinalin123">Manzo Shen</vendor>
+
+    <description><![CDATA[
+      1、从layout文件中读取控件，添加到相关类中.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      1、读取layout控件，添加java对象到相关类中.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="SimpleGenerateCodeByLayout" class="com.manzo.plugin.actions.SimpleGenerateCodeAction"
+                text="MSimpleGenerateByLayout">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta M"/>
+        </action>
+    </actions>
+
+</idea-plugin>
