@@ -110,6 +110,11 @@ public class AndroidUtils {
         return foundFiles[0];
     }
 
+    /**
+     * AndroidView是自己定义的对象，不用太在意，用来装填数据
+     * @param f
+     * @return
+     */
     @NotNull
     public static List<AndroidView> getIDsFromXML(@NotNull PsiFile f) {
         final ArrayList<AndroidView> ret = new ArrayList<AndroidView>();
