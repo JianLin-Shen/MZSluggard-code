@@ -1,17 +1,19 @@
 <idea-plugin>
     <id>com.manzo.android.plugin.layout</id>
     <name>ManzoAndroidPlugin</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <vendor email="1104724999@qq.com" url="https://blog.csdn.net/shenjinalin123">Manzo Shen</vendor>
 
     <description><![CDATA[
-      1、从layout文件中读取控件，添加到相关类中.<br>
-      <em>most HTML tags may be used</em>
+      提供各类代码自动生成代码<br>
+        1、Activity中，选择R.layout.xxx。根据layout自动生成对象和设置点击事件<br>
+        2、Adapter中，选择R.layout.xxx。根据layout，在ViewHolder中自动生成注入式代码对象<br>
+	    @InjectView(R.id.test)<br>
+	    private TextView mTest;<br>
     ]]></description>
 
     <change-notes><![CDATA[
       1、读取layout控件，添加java对象到相关类中.<br>
-      <em>most HTML tags may be used</em>
     ]]>
     </change-notes>
 
@@ -34,6 +36,11 @@
                 text="MSimpleGenerateByLayout">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta M"/>
+        </action>
+        <action id="GenerateCodeInAdapter" class="com.manzo.plugin.actions.GenerateCodeInAdapterAction"
+                text="MGenerateAdapterByLayout">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta B"/>
         </action>
     </actions>
 

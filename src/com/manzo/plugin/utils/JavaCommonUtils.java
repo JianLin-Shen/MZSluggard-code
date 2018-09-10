@@ -39,4 +39,26 @@ public class JavaCommonUtils {
             //do noting
         }
     }
+
+    public static void importSelProjectPackage(PsiClass currentClass, Project project, String importClassName) {
+        try {
+            PsiClass[] importClasses = PsiShortNamesCache.getInstance(project).getClassesByName(importClassName, GlobalSearchScope.allScope(project));
+            PsiElementFactory elementFactory = JavaPsiFacade.getElementFactory(project);
+            PsiClass tPsiClass = null;
+            for (PsiClass mPsiClass : importClasses) {
+                String nameStr = mPsiClass.getQualifiedName();
+                if (StringUtils.isBlank(nameStr)) {
+                    continue;
+                }
+                tPsiClass = mPsiClass;
+            }
+            if (tPsiClass == null) {
+                return;
+            }
+            PsiImportStatement importStatement = elementFactory.createImportStatement(tPsiClass);
+            ((PsiJavaFile) currentClass.getContainingFile()).getImportList().add(importStatement);
+        } catch (Exception e) {
+            //do noting
+        }
+    }
 }
