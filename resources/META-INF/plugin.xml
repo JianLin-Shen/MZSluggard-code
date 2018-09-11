@@ -28,6 +28,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <internalFileTemplate name="MVPTemplateClass"/>
     </extensions>
 
     <actions>
@@ -41,6 +42,10 @@
                 text="MGenerateAdapterByLayout">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta B"/>
+        </action>
+        <action id="GenerateMVPGroupAction" class="com.manzo.plugin.actions.GenerateMVPGroupAction"
+                text="MGenerateMVPGroup" icon="/icons/icon_mvp.png">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>
     </actions>
 

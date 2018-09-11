@@ -1,0 +1,7 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class ${NAME} extends BaseView{
+        }
