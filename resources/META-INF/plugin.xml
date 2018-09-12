@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.manzo.android.plugin.layout</id>
     <name>ManzoAndroidPlugin</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="1104724999@qq.com" url="https://blog.csdn.net/shenjinalin123">Manzo Shen</vendor>
 
     <description><![CDATA[
