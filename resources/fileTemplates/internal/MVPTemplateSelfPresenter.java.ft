@@ -1,0 +1,11 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class ${NAME} extends BasePresenter<${FA_INTERFACE}>{
+
+        public ${NAME}(${FA_INTERFACE} view) {
+        super(view);
+        }
+}

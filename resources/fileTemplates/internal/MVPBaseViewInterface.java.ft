@@ -1,0 +1,9 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+import android.app.Activity;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public interface ${NAME} extends ${FA_INTERFACE} {
+       public Activity getActivity();
+        }

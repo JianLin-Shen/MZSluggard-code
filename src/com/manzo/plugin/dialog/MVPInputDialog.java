@@ -6,6 +6,7 @@ import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.JavaDirectoryService;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.impl.file.PsiDirectoryFactory;
+import com.manzo.plugin.controller.MvpHcbController;
 import com.manzo.plugin.utils.JavaCommonUtils;
 import org.apache.commons.lang.StringUtils;
 
@@ -62,21 +63,7 @@ public class MVPInputDialog extends JDialog {
             return;
         }
         //TODO 添加代码操作
-        Project fatherProject = mAnActionEvent.getProject();
-        if (fatherProject == null) {
-            return;
-        }
-        //获取所选的目录，即需要添加类的的包路径file
-        VirtualFile virtualFile = JavaCommonUtils.getSelectVirtualFile(mAnActionEvent);
-
-        if (virtualFile == null || !virtualFile.isDirectory()) {
-            return;
-        }
-        //通过所选文件，获取包的directory
-        PsiDirectory directory = PsiDirectoryFactory.getInstance(fatherProject).createDirectory(virtualFile);
-        //添加类
-        String actName = activity + "Activity";
-        JavaDirectoryService.getInstance().createClass(directory, actName, "MVPTemplateClass");
+        MvpHcbController.generateMvpCode(activity, mAnActionEvent);
         dispose();
     }
 

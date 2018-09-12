@@ -18,6 +18,7 @@ import java.util.List;
 
 public class AndroidUtils {
 
+    public static final String ANDROID_SRC_PATH = "src/main/java";
     private AndroidUtils() {
     }
 

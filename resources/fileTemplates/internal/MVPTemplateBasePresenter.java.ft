@@ -1,0 +1,17 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class BasePresenter<T extends IView> {
+    protected T mView;
+
+    protected BasePresenter(T view) {
+        mView = view;
+    }
+
+
+    public void onDestroy() {
+        mView = null;
+    }
+}

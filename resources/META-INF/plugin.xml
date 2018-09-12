@@ -29,6 +29,10 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <internalFileTemplate name="MVPTemplateClass"/>
+        <internalFileTemplate name="MVPBaseViewInterface"/>
+        <internalFileTemplate name="MVPTemplateBasePresenter"/>
+        <internalFileTemplate name="MVPTemplateSelfPresenter"/>
+        <internalFileTemplate name="MVPTemplateActivity"/>
     </extensions>
 
     <actions>

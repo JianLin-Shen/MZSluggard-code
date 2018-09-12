@@ -1,0 +1,23 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+import android.app.Activity;
+import android.os.Bundle;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class ${NAME} extends Activity implements ${SELF_IVIEW_NAME}{
+private ${SELF_PRESENT_NAME} mPresenter;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mPresenter = new ${SELF_PRESENT_NAME}(this);
+        //TODO setContentView();
+
+        }
+
+@Override
+public Activity getActivity() {
+        return this;
+        }
+        }
