@@ -17,4 +17,9 @@ Android插件，辅助生成代码MZSluggard-code
 * 生成mvp模式activity相关类
 * 生成adapter关联layout控件对象
 
+===============================
+操作指南
+===============================
+**通过Layout控件生成对象**
 
+.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/v1.0.3.gif
