@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.manzo.android.sluggard.plugin</id>
     <name>MZSluggard-code</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <vendor email="1104724999@qq.com" url="https://blog.csdn.net/shenjinalin123">Manzo Shen</vendor>
 
     <description><![CDATA[
@@ -11,11 +11,12 @@
         @InjectView(R.id.test)
         Private TextView mTest;
         3, MVP mode is automatically generated under the selection of the package
+        4、You can edit the fields you read and set the wrapped functions.
+        Choose whether you want to add click events.
     ]]></description>
 
     <change-notes><![CDATA[
-        1、You can edit the fields you read and set the wrapped functions.
-        Choose whether you want to add click events.
+        1、change menu name is MZSluggard-code
       <br>
     ]]>
     </change-notes>
@@ -40,20 +41,20 @@
 
     <actions>
         <!-- Add your actions here -->
-        <group id="ManzoPlugin.AndroidClassGroup" text="MAndroidGenerateFile" popup="true" icon="/icons/icon_mvp.png">
+        <group id="ManzoPlugin.AndroidClassGroup" text="MZSluggard-File" popup="true" icon="/icons/icon_mvp.png">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
             <action id="GenerateMVPGroupAction" class="com.manzo.plugin.actions.GenerateMVPGroupAction"
-                    text="MGenerateMVPGroup">
+                    text="GenerateMVPGroup">
             </action>
         </group>
-        <group id="ManzoPlugin.AndroidCodeGroup" text="MAndroidGenerateCode" popup="true" icon="/icons/icon_mvp.png">
+        <group id="ManzoPlugin.AndroidCodeGroup" text="MZSluggard-code" popup="true" icon="/icons/icon_mvp.png">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <action id="SimpleGenerateCodeByLayout" class="com.manzo.plugin.actions.SimpleGenerateCodeAction"
-                    text="MSimpleGenerateByLayout">
+                    text="SimpleGenerateByLayout">
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta M"/>
             </action>
             <action id="GenerateCodeInAdapter" class="com.manzo.plugin.actions.GenerateCodeInAdapterAction"
-                    text="MGenerateAdapterByLayout">
+                    text="GenerateAdapterByLayout">
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta B"/>
             </action>
         </group>
