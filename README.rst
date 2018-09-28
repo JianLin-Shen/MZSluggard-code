@@ -19,6 +19,13 @@ Android插件，辅助生成代码MZSluggard-code
 **Reference:**  ManzoShen_
 
 ===============================
+AndroidStudio中添加
+===============================
+
+**🔍关键字：MZSluggard**
+.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/load_bos.png
+
+===============================
 操作指南
 ===============================
 **通过Layout控件生成对象**
