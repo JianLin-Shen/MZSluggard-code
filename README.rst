@@ -3,13 +3,13 @@
 MZSluggard-code
 ===============================
 .. image:: https://img.shields.io/badge/version-1.0.4-green.svg?style=green
-        :target: https://github.com/JianLin-Shen/ManzoAndroidPlugin/releases
+        :target: https://github.com/JianLin-Shen/MZSluggard-code/releases
         
 .. image:: https://img.shields.io/badge/jetbrains-download-green.svg?style=green
         :target: https://plugins.jetbrains.com/plugin/11140-mzsluggard-code
         
 .. image:: https://img.shields.io/badge/local-download-green.svg?style=green
-        :target: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/resleaseversion/MZSluggard-code-1.0.4.jar
+        :target: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/resleaseversion/MZSluggard-code-1.0.4.jar
 
 Android插件，辅助生成代码MZSluggard-code
 
@@ -26,18 +26,18 @@ AndroidStudio中添加
 
 注：通过Browse搜索添加的插件，版本不一定最新。原因是jetBrains审核插件需要时间。最新插件可通过点击标签 download_，本地安装。
 
-.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/load_bos.png
+.. image:: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/guidimg/load_bos.png
 
 ===============================
 操作指南
 ===============================
 **通过Layout控件生成对象**
 
-.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/v1.0.4.gif
+.. image:: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/guidimg/v1.0.4.gif
 
 **生成MVPActivity**
 
-.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/v1.0.3.gif
+.. image:: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/guidimg/v1.0.3.gif
 
 
 ===============================
@@ -52,4 +52,4 @@ Member
 * ManzoShen_
 
 .. _ManzoShen: https://blog.csdn.net/shenjinalin123
-.. _DownLoad: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/resleaseversion/MZSluggard-code-1.0.4.jar
+.. _DownLoad: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/resleaseversion/MZSluggard-code-1.0.4.jar
