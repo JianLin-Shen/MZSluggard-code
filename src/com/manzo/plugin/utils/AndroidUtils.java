@@ -1,5 +1,9 @@
 package com.manzo.plugin.utils;
 
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.actionSystem.Presentation;
+import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VfsUtil;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -9,11 +13,14 @@ import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.xml.XmlAttribute;
 import com.intellij.psi.xml.XmlTag;
 import com.manzo.plugin.bean.AndroidView;
+import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 
 public class AndroidUtils {
@@ -96,12 +103,6 @@ public class AndroidUtils {
     @Nullable
     public static PsiFile findXmlResource(Project project, String layoutName) {
 
-        if (!layoutName.startsWith("R.layout.")) {
-            return null;
-        }
-
-        layoutName = layoutName.substring("R.layout.".length());
-
         String name = String.format("%s.xml", layoutName);
         PsiFile[] foundFiles = FilenameIndex.getFilesByName(project, name, GlobalSearchScope.allScope(project));
         if (foundFiles.length <= 0) {
@@ -118,7 +119,7 @@ public class AndroidUtils {
      */
     @NotNull
     public static List<AndroidView> getIDsFromXML(@NotNull PsiFile f) {
-        final ArrayList<AndroidView> ret = new ArrayList<AndroidView>();
+        final List<AndroidView> ret = new LinkedList<>();
         f.accept(new XmlRecursiveElementVisitor() {
             @Override
             public void visitElement(final PsiElement element) {
@@ -152,6 +153,27 @@ public class AndroidUtils {
             }
         }
         return null;
+    }
+
+    public static void layoutCodeCanLoad(AnActionEvent e){
+        Presentation presentation = e.getPresentation();
+        Project project = e.getProject();
+        if (project == null) {
+            presentation.setEnabled(false);
+            return;
+        }
+        Editor editor = CommonDataKeys.EDITOR.getData(e.getDataContext());
+        if (editor == null || StringUtils.isBlank(editor.getSelectionModel().getSelectedText())) {
+            presentation.setEnabled(false);
+            return;
+        }
+        String layoutName = editor.getSelectionModel().getSelectedText();
+        PsiFile xmlFile = AndroidUtils.findXmlResource(project, layoutName);
+        if (xmlFile == null) {
+            presentation.setEnabled(false);
+            return;
+        }
+        presentation.setEnabled(true);
     }
 
 }

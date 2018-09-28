@@ -1,20 +1,22 @@
 <idea-plugin>
     <id>com.manzo.android.sluggard.plugin</id>
     <name>MZSluggard-code</name>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
     <vendor email="1104724999@qq.com" url="https://blog.csdn.net/shenjinalin123">Manzo Shen</vendor>
 
     <description><![CDATA[
-      提供各类代码自动生成代码<br>
-        1、Activity中，选择R.layout.xxx。根据layout自动生成对象和设置点击事件<br>
-        2、Adapter中，选择R.layout.xxx。根据layout，在ViewHolder中自动生成注入式代码对象<br>
-	    @InjectView(R.id.test)<br>
-	    private TextView mTest;<br>
-	    3、MVP模式在包的选择下自动生成
+      Provide various types of code to automatically generate code<br>
+        1. In the Activity, select R.layout.xxx. Automatically generate objects and set click events based on layout
+        2. In the Adapter, select R.layout.xxx. Automatically generate injected code objects in ViewHolder according to layout
+        @InjectView(R.id.test)
+        Private TextView mTest;
+        3, MVP mode is automatically generated under the selection of the package
     ]]></description>
 
     <change-notes><![CDATA[
-      1、读取layout控件，添加java对象到相关类中.<br>
+        1、You can edit the fields you read and set the wrapped functions.
+        Choose whether you want to add click events.
+      <br>
     ]]>
     </change-notes>
 
@@ -45,7 +47,7 @@
             </action>
         </group>
         <group id="ManzoPlugin.AndroidCodeGroup" text="MAndroidGenerateCode" popup="true" icon="/icons/icon_mvp.png">
-            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <action id="SimpleGenerateCodeByLayout" class="com.manzo.plugin.actions.SimpleGenerateCodeAction"
                     text="MSimpleGenerateByLayout">
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta M"/>

@@ -7,7 +7,10 @@ public class AndroidView {
 
     private String id;
     private String name;
+    private String mFildName;
     private PsiElement xmlTarget;
+    public Boolean isChoice = true;
+    public Boolean isClick = true;
 
     public AndroidView(@NotNull String id, @NotNull String className, PsiElement xmlTarget) {
         this.xmlTarget = xmlTarget;
@@ -25,6 +28,7 @@ public class AndroidView {
             this.name = String.format("%s", className);
         else
             this.name = String.format("%s", className);
+        mFildName = generFildName();
     }
 
     public PsiElement getXmlTarget() {
@@ -40,7 +44,15 @@ public class AndroidView {
     }
 
     public String getFieldName() {
-        String[] words = getId().split("_");
+        return mFildName;
+    }
+
+    public void setFieldName(String fieldName) {
+        mFildName = fieldName;
+    }
+
+    private String generFildName() {
+        String[] words = id.split("_");
         StringBuilder fieldName = new StringBuilder();
         fieldName.append('m');
         for (String word : words) {

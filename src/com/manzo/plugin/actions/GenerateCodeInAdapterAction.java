@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiFile;
 import com.manzo.plugin.controller.SimpleFileController;
+import com.manzo.plugin.utils.AndroidUtils;
 
 /**
  * Created by shenjianlin on 2018/9/5.
@@ -30,5 +31,11 @@ public class GenerateCodeInAdapterAction extends AnAction {
             return;
         }
         SimpleFileController.loadFileToAdapter(fatherProject, editor, file);
+    }
+
+    @Override
+    public void update(AnActionEvent e) {
+        super.update(e);
+        AndroidUtils.layoutCodeCanLoad(e);
     }
 }
