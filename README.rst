@@ -22,5 +22,4 @@ Android插件，辅助生成代码MZSluggard-code
 ===============================
 **通过Layout控件生成对象**
 
-
-![img]https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/v1.0.4.gif
+.. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/v1.0.4.gif
