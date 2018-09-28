@@ -24,7 +24,7 @@ AndroidStudio中添加
 
 **🔍关键字：MZSluggard**
 
-注：通过Browse搜索添加的插件，版本不一定最新。原因是jetBrains审核插件需要时间。最新插件可通过点击标签DownLoad_，本地安装。
+注：通过Browse搜索添加的插件，版本不一定最新。原因是jetBrains审核插件需要时间。最新插件可通过点击标签 downLoad_，本地安装。
 
 .. image:: https://github.com/JianLin-Shen/ManzoAndroidPlugin/blob/master/guidimg/load_bos.png
 
