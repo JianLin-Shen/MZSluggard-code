@@ -39,6 +39,9 @@ AndroidStudio中添加
 
 .. image:: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/guidimg/v1.0.3.gif
 
+**Adapter生成代码**
+
+.. image:: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/guidimg/Adapter_user.gif
 
 ===============================
 Notes
