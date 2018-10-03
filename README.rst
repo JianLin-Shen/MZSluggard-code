@@ -6,7 +6,7 @@ MZSluggard-code
         :target: https://github.com/JianLin-Shen/MZSluggard-code/releases
         
 .. image:: https://img.shields.io/badge/jetbrains-download-green.svg?style=green
-        :target: https://plugins.jetbrains.com/plugin/11140-mzsluggard-code
+        :target: https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50426
         
 .. image:: https://img.shields.io/badge/local-download-green.svg?style=green
         :target: https://github.com/JianLin-Shen/MZSluggard-code/blob/master/resleaseversion/MZSluggard-code-1.0.4.jar
