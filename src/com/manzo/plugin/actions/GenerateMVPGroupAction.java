@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Created by shenjianlin on 2018/9/10.
  */
-public class GenerateMVPGroupAction extends AnAction {
+public class GenerateMVPGroupAction extends BaseFileAction {
 
 
     @Override
@@ -37,32 +37,4 @@ public class GenerateMVPGroupAction extends AnAction {
         editDialog.setVisible(true);
     }
 
-    @Override
-    public void update(AnActionEvent e) {
-        super.update(e);
-        Presentation presentation = e.getPresentation();
-        Project project = e.getProject();
-        if (project == null) {
-            presentation.setEnabled(false);
-            return;
-        }
-        presentation.setEnabled(selectorNotJavaPackage(e));
-    }
-
-    private boolean selectorNotJavaPackage(AnActionEvent e) {
-        VirtualFile virtualFile = getSelectVirtualFile(e);
-        if (virtualFile == null || !virtualFile.isDirectory()) {
-            return false;
-        }
-        String pathStr = virtualFile.getPath();
-        if (StringUtils.isBlank(pathStr)) {
-            return false;
-        }
-        return pathStr.contains("src/main/java");
-    }
-
-    private @Nullable
-    VirtualFile getSelectVirtualFile(AnActionEvent e) {
-        return CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
-    }
 }
