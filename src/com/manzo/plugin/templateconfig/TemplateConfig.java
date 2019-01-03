@@ -16,9 +16,17 @@ public class TemplateConfig {
     public static final String FA_INTERFACE = "FA_INTERFACE";
     public static final String SELF_IVIEW_NAME = "SELF_IVIEW_NAME";
     public static final String SELF_PRESENT_NAME = "SELF_PRESENT_NAME";
+    public static final String BEAN_PLATE = "CommonBean";
 
     //预置类名称
     public static final String BASE_PRESENTER_CLASS = "BasePresenter";
+    public static final String BASE_COMMON_ADAPTER_PLATE = "GenerateListBaseAdapter";
+    public static final String ADATPER_INTERFACE = "GenerateListAdapterInterface";
+    public static final String BASE_ADAPTER_VIEW_HOLDER = "GenerateListAdapterBaseViewHolder";
+    public static final String ADAPTER_VIEW_HOLDER = "GenerateAdapterViewHandler";
+    public static final String ADAPTER_INJECT = "AdapterInjectView";
+    //ListAdapter名称
+    public static final String BEAN_NAME = "LAD_BEAN";
 
     /**
      * 通过模板MVPBaseViewInterface 创建Interface
@@ -44,5 +52,19 @@ public class TemplateConfig {
         params.put(TemplateConfig.SELF_IVIEW_NAME, selfIView);
         params.put(TemplateConfig.SELF_PRESENT_NAME, selfPresenter);
         return JavaDirectoryService.getInstance().createClass(directory, className, "MVPTemplateActivity", false, params);
+    }
+
+    /**
+     * 创建ListAdapter
+     *
+     * @param directory 目录
+     * @param className
+     * @param beanName  包含对象的类名
+     * @return
+     */
+    public static PsiClass createAdapterByTemplate(PsiDirectory directory, String className, String beanName) {
+        Map<String, String> params = new HashMap<>();
+        params.put(BEAN_NAME, beanName);
+        return JavaDirectoryService.getInstance().createClass(directory, className, "GenerateListAdapter", false, params);
     }
 }

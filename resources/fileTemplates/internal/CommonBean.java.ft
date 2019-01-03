@@ -1,0 +1,9 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import java.io.Serializable;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class  ${NAME} implements Serializable{
+        }

@@ -110,4 +110,10 @@ public class JavaCommonUtils {
     VirtualFile getSelectVirtualFile(AnActionEvent e) {
         return CommonDataKeys.VIRTUAL_FILE.getData(e.getDataContext());
     }
+
+    public static PsiDirectory createOrFindDir(PsiDirectory parentDir, String dirName) {
+        return parentDir.findSubdirectory(dirName) == null ?
+                parentDir.createSubdirectory(dirName) :
+                parentDir.findSubdirectory(dirName);
+    }
 }

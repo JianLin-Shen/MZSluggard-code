@@ -1,0 +1,48 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+
+import java.util.List;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public class ${NAME} extends CommonListAdapter<${LAD_BEAN}, ${NAME}.ViewHolder> {
+    public ${NAME}(Context context,
+                       List<${LAD_BEAN}> datas) {
+        super(context, datas);
+    }
+
+    @Override
+    protected void bindData(ViewHolder holder, ${LAD_BEAN} bean, View convertView,
+                            ViewGroup parent) {
+
+    }
+
+    @Override
+    public void bindListener(ViewHolder holder) {
+
+    }
+
+    @Override
+    protected int getItemLayoutId() {
+        //设置 adapter的布局 R.layout.xxx
+        return 0;
+    }
+
+    @Override
+    protected Class<ViewHolder> getViewHolder() {
+        return ViewHolder.class;
+    }
+
+/**
+* viewholder设置使用的视图对象。
+* 例：@InjectView(R.id.text)
+*     private TextView mTestView;
+*/
+public static class ViewHolder extends BaseViewHolder {
+    }
+
+}

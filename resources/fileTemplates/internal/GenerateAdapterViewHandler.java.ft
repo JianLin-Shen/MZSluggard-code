@@ -1,0 +1,61 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+
+import java.lang.reflect.Field;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public final class ${NAME} {
+    private View mConvert;
+    public BaseViewHolder mViewHolder;
+
+    public ViewHandler(Context context, int layoutId, int position, ViewGroup parent, Class<? extends BaseViewHolder> baseView) {
+        mConvert = LayoutInflater.from(context).inflate(layoutId, parent, false);
+        //视图注入
+        injectView(baseView, mConvert);
+        mConvert.setTag(this);
+    }
+
+    private void injectView(Class<? extends BaseViewHolder> baseView, View convert) {
+        if (baseView != null && convert != null) {
+            try {
+                mViewHolder = baseView.newInstance();
+                Field[] fields = baseView.getDeclaredFields();
+                for (Field field : fields) {
+                    InjectView injectView = field.getAnnotation(InjectView.class);
+                    if (injectView != null) {
+                        int viewId = injectView.value();
+                        field.setAccessible(true);
+                        field.set(mViewHolder, convert.findViewById(viewId));
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static ViewHandler getHolder(Context context, int layoutId, int position, View convert, ViewGroup parent, CommonListAdapter adAdapter, Class<? extends BaseViewHolder> baseView) {
+        if (convert == null) {
+            ViewHandler handler = new ViewHandler(context, layoutId, position, parent, baseView);
+            adAdapter.bindListener(handler.getViewHolder());
+            return handler;
+        } else {
+            return (ViewHandler) convert.getTag();
+        }
+    }
+
+    public View getConvert() {
+        return mConvert;
+    }
+
+    public BaseViewHolder getViewHolder() {
+        return mViewHolder;
+    }
+}

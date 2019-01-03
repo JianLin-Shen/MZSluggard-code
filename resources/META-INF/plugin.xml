@@ -46,6 +46,8 @@
             <action id="GenerateMVPGroupAction" class="com.manzo.plugin.actions.GenerateMVPGroupAction"
                     text="GenerateMVPGroup">
             </action>
+            <action id="GenerateCodeListAdapterAction" class="com.manzo.plugin.actions.GenerateListAdapterAction"
+                    text="GenerateListAdapter"/>
         </group>
         <group id="ManzoPlugin.AndroidCodeGroup" text="MZSluggard-code" popup="true" icon="/icons/icon_mvp.png">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
@@ -58,7 +60,6 @@
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta B"/>
             </action>
         </group>
-
     </actions>
 
 </idea-plugin>

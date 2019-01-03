@@ -1,0 +1,13 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+import java.util.List;
+/**
+ * Author: ${USER}
+ * Created on ${DATE}
+ */
+public interface ${NAME}<Bean>{
+        void addDataAndUpdateUI(final List<? extends Bean> dataMapTemp);
+
+        void setDataAndUpdateUI(final List<? extends Bean> dataMapTemp);
+
+        void clearDataAndUpdateUI();
+        }
