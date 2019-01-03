@@ -13,6 +13,7 @@ import com.manzo.plugin.utils.JavaCommonUtils;
 
 /**
  * Created by shenjianlin on 2018/9/11.
+ * 控制mvp生成逻辑控制器
  */
 public class MvpHcbController {
 

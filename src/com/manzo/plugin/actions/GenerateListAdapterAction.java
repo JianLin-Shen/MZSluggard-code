@@ -5,6 +5,7 @@ import com.manzo.plugin.dialog.ListAdapterDialog;
 
 /**
  * Created by shenjianlin on 2018/12/13.
+ * 生成gridView，listView通用的Adapter
  */
 public class GenerateListAdapterAction extends BaseFileAction {
 

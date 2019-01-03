@@ -7,6 +7,10 @@ import org.apache.commons.lang.StringUtils;
 import javax.swing.*;
 import java.awt.event.*;
 
+/**
+ * 生成Adapter交互dialog
+ */
+
 public class ListAdapterDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;

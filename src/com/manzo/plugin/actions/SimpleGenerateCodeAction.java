@@ -12,6 +12,7 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  * Created by shenjianlin on 2018/8/30.
+ * 导入Activity关联layout的控件
  */
 public class SimpleGenerateCodeAction extends AnAction {
 

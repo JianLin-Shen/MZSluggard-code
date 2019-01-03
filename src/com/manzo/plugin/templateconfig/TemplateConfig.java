@@ -9,6 +9,7 @@ import java.util.Map;
 
 /**
  * Created by shenjianlin on 2018/9/12.
+ * 模板配置
  */
 public class TemplateConfig {
     //模板配置属性

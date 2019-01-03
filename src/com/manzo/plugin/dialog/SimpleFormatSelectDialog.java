@@ -16,6 +16,9 @@ import javax.swing.table.TableColumn;
 import java.awt.event.*;
 import java.util.List;
 
+/**
+ * 生成activity交互dialog
+ */
 public class SimpleFormatSelectDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;

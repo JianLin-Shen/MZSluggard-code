@@ -12,6 +12,7 @@ import com.manzo.plugin.utils.AndroidUtils;
 
 /**
  * Created by shenjianlin on 2018/9/5.
+ * 自动导入Adapter关联layout中的控件
  */
 public class GenerateCodeInAdapterAction extends AnAction {
 

@@ -13,6 +13,9 @@ import org.apache.commons.lang.StringUtils;
 import javax.swing.*;
 import java.awt.event.*;
 
+/**
+ * 生成mvp的交互dialog
+ */
 public class MVPInputDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;

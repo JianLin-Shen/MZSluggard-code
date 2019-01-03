@@ -12,6 +12,7 @@ import com.manzo.plugin.utils.JavaCommonUtils;
 
 /**
  * Created by shenjianlin on 2018/12/12.
+ * 控制通用adapter生成逻辑控制器
  */
 public class ListCodeAdapterController {
     private static final String BASE_ADAPTER = "CommonListAdapter";
@@ -19,6 +20,7 @@ public class ListCodeAdapterController {
     private static final String ADAPTER_INTERFACE = "AdapterRefreshInterface";
     private static final String VIEW_HANDLER = "ViewHandler";
     private static final String INJECT_VIEW = "InjectView";
+    private static final String COMMON_BEAN = "CommonBean";
 
     public static void generateAdapterCode(String className, String beanName, AnActionEvent anActionEvent) {
         Project fatherProject = anActionEvent.getProject();
@@ -93,9 +95,9 @@ public class ListCodeAdapterController {
             JavaCommonUtils.importSelfProjectPackageRunWriteAction(commonLIstAdapterClass, fatherProject, VIEW_HANDLER);
         }
 
-        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, "CommonListAdapter");
-        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, "BaseViewHolder");
-        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, "CommonBean");
+        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, BASE_ADAPTER);
+        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, BASE_HOLDER);
+        JavaCommonUtils.importSelfProjectPackageRunWriteAction(selfClass, fatherProject, COMMON_BEAN);
     }
 
 }

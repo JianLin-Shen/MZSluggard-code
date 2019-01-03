@@ -20,6 +20,7 @@ import java.util.Set;
 
 /**
  * Created by shenjianlin on 2018/9/4.
+ * 控制生成activity中导入控件逻辑控制器
  */
 public class SimpleFileController {
 
